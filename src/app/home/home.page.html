@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Kempis Simple Map
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Kempis Map</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container"></div>
+
+  <ion-button expand="full" (click)="showPopup()">
+    Show Information
+  </ion-button>
+
+  <ion-button expand="full" (click)="findLocation()">
+    Find Location
+  </ion-button>
+
+  <!-- Popover for information -->
+  <ion-popover #popover>
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Information</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <p>This is the map to locate places easily using GPS.</p>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+</ion-content>
